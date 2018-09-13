@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HATE the CRIME</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <section id="herounit">
+        <video class="fullvid" src="http://benjaminbonnichsen.dk/webfeature/video/hero_unit2.mp4" autoplay="" muted="" loop="" style="width: 2560px; height: 1440px;"></video>
+
+        <video class="fullmobile" src="http://benjaminbonnichsen.dk/webfeature/video/hero_unit_mobil2.mp4" autoplay="" muted="" loop="" style="width: 100%; height: 110%;"></video>
+    </section>
+
+    <section id="spark">
+        <iframe src="https://spark.adobe.com/page/ML2q8aQzR9zr0/" frameborder="0"></iframe>
+    </section>
+
+
+    <script>
+        $(document).ready(function() {
+
+            $('body')
+                .prepend('<div class="vidcover"></div>')
+                .hover(
+                    function() {
+                        $('.vidcover').css({
+                            'opacity': '0.4'
+                        })
+                    },
+                    function() {
+                        $('.vidcover').css({
+                            'opacity': '0'
+                        })
+                    }
+                );
+
+            $(window).resize(function() {
+                var theWidth = $(window).width();
+                var theHeight = $(window).height();
+                var newWidth = (theHeight * 1.77777778);
+                var newHeight = (theWidth / 1.77777778);
+
+                if ((theWidth > 1280) && (newHeight > theHeight)) {
+                    $('.fullvid').css({
+                        'width': theWidth,
+                        'height': newHeight
+                    });
+                }
+
+                if ((theHeight > 720) && (newWidth > theWidth)) {
+                    $('.fullvid').css({
+                        'height': theHeight,
+                        'width': newWidth
+                    });
+                }
+
+                $('.vidcover').css({
+                    'height': theHeight,
+                    'width': theWidth
+                });
+            }).resize();
+        });
+    </script>
+</body>
+</html>

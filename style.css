@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+}
+
+/*
+.frontpage_image {
+    width: 101vw;
+    height: 100vh;
+    background-image: url(http://nicholasnybro.dk/media/9790/ss18_cover.jpg);
+    background-size: cover;
+    position: absolute;
+    z-index: 1000;
+    background-position: right;
+    visibility: visible;
+    top: 0;
+}
+*/
+
+.fullmobile {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: -60px;
+}
+
+.fullvid {
+    margin: 0;
+    padding: 0;
+    height: 120vh;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    z-index: -2;
+    -webkit-transform: translate(-50%, 50%);
+    -moz-transform: translate(-50%, 50%);
+    -ms-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
+    -webkit-transition: all 400ms ease-out 400ms;
+    -moz-transition: all 400ms ease-out 400ms;
+    -ms-transition: all 400ms ease-out 400ms;
+    transition: all 400ms ease-out 400ms;
+    display: none;
+}
+
+
+#spark {
+    width: 100vw;
+    height: 100vh;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width: 415px) {
+    .fullvid {
+        display: block;
+    }
+
+    .fullmobile {
+        display: none;
+    }
+
+
+}
